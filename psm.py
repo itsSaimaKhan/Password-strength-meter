@@ -27,7 +27,8 @@ if password:
     else:
         feedback.append("❌Password should contain both upper and lower case characters.")
         
-    if re.search(r'\d', password):   
+    if re.search(r'\d', password):
+           
                
         
     
