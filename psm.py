@@ -28,6 +28,27 @@ if password:
         feedback.append("❌Password should contain both upper and lower case characters.")
         
     if re.search(r'\d', password):
+        score += 1
+    else:
+        feedback.append("❌Password should contain at least one digit.")
+    if re.search(r'[@$!%*?&]', password):
+        score += 1
+    else:
+        feedback.append("❌Password should contain at least one special character (@, $, !, %, *, ?, &).")
+    if score == 4:
+        feedback.append("✅Your password is strong!🎉")   
+    elif score == 3:
+        feedback.append("✅Your password is medium strength. It could be stronger.")
+    else:
+        feedback.append("❌Your password is weak. Please consider using a stronger password.")
+    
+    if feedback:
+        st.markdown("## Improvement Suggestions:")
+        for tip in feedback:
+            st.write(tip)
+    else:
+        st.info("Please enter a password to check its strength.")
+        
            
                
         
