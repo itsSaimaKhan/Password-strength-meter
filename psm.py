@@ -20,4 +20,13 @@ if password:
     if len(password) >= 8:
         score += 1
     else :
-        feedback.append("Password should be at least 8 characters long.")
+        feedback.append("❌Password should be at least 8 characters long.")
+    
+    if re.search(r'[A-Z]', password) and re.search(r'[a-z]', password):
+        score += 1  
+    else:
+        feedback.append("❌Password should contain both upper and lower case characters.")
+        
+    if re.search(r'\d', password):          
+        
+    
