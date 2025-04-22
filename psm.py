@@ -42,12 +42,12 @@ if password:
     else:
         feedback.append("❌Your password is weak. Please consider using a stronger password.")
     
-    if feedback:
-        st.markdown("## Improvement Suggestions:")
-        for tip in feedback:
-            st.write(tip)
-    else:
-        st.info("Please enter a password to check its strength.")
+    # if feedback:
+    #     st.markdown("## Improvement Suggestions:")
+    #     for tip in feedback:
+    #         st.write(tip)
+    # else:
+    #     st.info("Please enter a password to check its strength.")
         
            
                
